@@ -35,6 +35,19 @@ class MyCitiesController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // Если была нажата кнопка «Удалить»
+        if editingStyle == .delete {
+            // Удаляем город из массива
+            cities.remove(at: indexPath.row)
+            // И удаляем строку из таблицы
+            tableView.deleteRows(at: [indexPath], with: .fade)
+           
+        }
+
+        }
+    
+    
     
     @IBAction func addCity(segue: UIStoryboardSegue) {
         
@@ -54,12 +67,12 @@ class MyCitiesController: UITableViewController {
                     cities.append(city)
                     // Обновляем таблицу
                     tableView.reloadData()
+                } 
                 }
             }
         }
     }
 
-    
-    
 
-}
+
+

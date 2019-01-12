@@ -120,7 +120,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQv-me-SYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="692"/>
+            <point key="canvasLocation" x="2588" y="743"/>
         </scene>
         <!--All Cities Controller-->
         <scene sceneID="vqo-ar-f4l">
@@ -167,7 +167,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnp-4p-Uzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="PIb-GK-BDl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2588" y="-206"/>
+            <point key="canvasLocation" x="2588" y="-34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BT5-gM-Y4A">
