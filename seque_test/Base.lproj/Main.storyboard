@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="495" y="104"/>
         </scene>
-        <!--All Cities Controller-->
+        <!--My Cities Controller-->
         <scene sceneID="E57-Lp-FHr">
             <objects>
-                <tableViewController id="0Zx-ia-7Lt" customClass="AllCitiesController" customModule="seque_test" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="0Zx-ia-7Lt" customClass="MyCitiesController" customModule="seque_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eor-yv-ekP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,40 +39,39 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="AllCities" id="IVy-Va-tNl">
+                                <navigationItem title="MyCities" id="IVy-Va-tNl">
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="BDq-U3-R07">
                                         <connections>
-                                            <segue destination="gyJ-33-j8R" kind="show" id="Np5-wB-0Of"/>
+                                            <segue destination="gyJ-33-j8R" kind="show" id="2UZ-qQ-eYR"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCitiesCell" id="8eT-fn-fjE" customClass="AllCitiesCell" customModule="seque_test" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCitiesCell" id="8eT-fn-fjE" customClass="MyCitiesCell" customModule="seque_test" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8eT-fn-fjE" id="KDI-hH-zaT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-gi-kCx">
-                                            <rect key="frame" x="16" y="10.5" width="42" height="22.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXq-ou-DEh">
+                                            <rect key="frame" x="23" y="11" width="336" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xqg-gi-kCx" secondAttribute="trailing" constant="20" symbolic="YES" id="Gx0-7i-RDZ"/>
-                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="bottom" secondItem="KDI-hH-zaT" secondAttribute="bottomMargin" id="Isr-C7-bD3"/>
-                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="leading" secondItem="KDI-hH-zaT" secondAttribute="leadingMargin" id="U68-nZ-Bzi"/>
-                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="centerY" secondItem="KDI-hH-zaT" secondAttribute="centerY" id="uLx-FG-NSc"/>
+                                        <constraint firstItem="lXq-ou-DEh" firstAttribute="trailing" secondItem="KDI-hH-zaT" secondAttribute="trailingMargin" id="ZQu-P8-Jye"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lXq-ou-DEh" secondAttribute="bottom" constant="1" id="bKq-FE-H8M"/>
+                                        <constraint firstItem="lXq-ou-DEh" firstAttribute="leading" secondItem="KDI-hH-zaT" secondAttribute="leadingMargin" constant="7" id="gzH-NW-JRQ"/>
+                                        <constraint firstItem="lXq-ou-DEh" firstAttribute="top" secondItem="KDI-hH-zaT" secondAttribute="topMargin" id="mSX-SE-AwF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="namesCities" destination="xqg-gi-kCx" id="JAo-WU-ut6"/>
-                                    <segue destination="zTe-M7-ewh" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="q8E-lw-BkQ"/>
+                                    <outlet property="myNamesCities" destination="lXq-ou-DEh" id="tQo-IG-S4c"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,9 +85,8 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmq-u3-5tE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="zTe-M7-ewh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1441" y="104"/>
+            <point key="canvasLocation" x="1524" y="-33.733133433283363"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="nw9-Ya-Bm4">
@@ -122,40 +120,41 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQv-me-SYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2321" y="634"/>
+            <point key="canvasLocation" x="2588" y="692"/>
         </scene>
-        <!--My Cities Controller-->
+        <!--All Cities Controller-->
         <scene sceneID="vqo-ar-f4l">
             <objects>
-                <tableViewController id="gyJ-33-j8R" customClass="MyCitiesController" customModule="seque_test" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gyJ-33-j8R" customClass="AllCitiesController" customModule="seque_test" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GZf-69-ViL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCitiesCell" id="ojW-j1-aT7" customClass="MyCitiesCell" customModule="seque_test" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllCitiesCell" id="ojW-j1-aT7" customClass="AllCitiesCell" customModule="seque_test" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ojW-j1-aT7" id="KKm-D6-CTc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXq-ou-DEh">
-                                            <rect key="frame" x="16" y="11" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-gi-kCx">
+                                            <rect key="frame" x="16" y="10.5" width="42" height="22.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lXq-ou-DEh" secondAttribute="trailing" constant="20" symbolic="YES" id="2ht-Dl-R6k"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="lXq-ou-DEh" secondAttribute="bottom" constant="1" id="PcN-sV-r7M"/>
-                                        <constraint firstItem="lXq-ou-DEh" firstAttribute="leading" secondItem="KKm-D6-CTc" secondAttribute="leadingMargin" id="izQ-jL-bSE"/>
-                                        <constraint firstItem="lXq-ou-DEh" firstAttribute="top" secondItem="KKm-D6-CTc" secondAttribute="topMargin" id="v3R-Af-Pgv"/>
+                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="bottom" secondItem="KKm-D6-CTc" secondAttribute="bottomMargin" id="7uJ-G8-GYK"/>
+                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="leading" secondItem="KKm-D6-CTc" secondAttribute="leadingMargin" id="C12-7m-KhG"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xqg-gi-kCx" secondAttribute="trailing" constant="20" symbolic="YES" id="SLy-aR-2CB"/>
+                                        <constraint firstItem="xqg-gi-kCx" firstAttribute="centerY" secondItem="KKm-D6-CTc" secondAttribute="centerY" id="VGd-Qn-0ta"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="myNamesCities" destination="lXq-ou-DEh" id="n2D-yZ-iFH"/>
+                                    <outlet property="namesCities" destination="xqg-gi-kCx" id="2XY-XE-vfM"/>
+                                    <segue destination="PIb-GK-BDl" kind="unwind" identifier="addCity" unwindAction="addCityWithSegue:" id="9yn-xX-GgC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -166,8 +165,9 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnp-4p-Uzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PIb-GK-BDl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2322" y="-206"/>
+            <point key="canvasLocation" x="2588" y="-206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BT5-gM-Y4A">
